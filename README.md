@@ -56,10 +56,8 @@ See flowchart and fsm below for a hint of how it works:
 ![](./doc/blackjackfsm_plantuml.png) 
 
 ### Remaining work
-- To add "Insurance" and "Surrender".  
-- Allow split on all faced cards, (treat them all as ten's).  
-- House should immediately win if first hand starts with a 10 followed by ace.  
-- Fix remaining bugs.
+See [Open Issues](https://github.com/torbjornhedqvist/blackjack/issues) for 
+remaining work.
 
 ### Test Coverage
 I have implemented a few test suits to explore how to use 
