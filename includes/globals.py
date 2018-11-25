@@ -18,7 +18,7 @@ logging.basicConfig(
     # filename='blackjack_debug.log',
     # filemode='w',  # overwrite previous logs
     # level=logging.DEBUG,
-    level=logging.INFO,
+    # level=logging.INFO,
     # level=logging.WARNING,
     format="%(asctime)s:%(levelname)s:%(module)s:%(lineno)d:%(message)s"
     )
@@ -80,7 +80,7 @@ PLAYER_CARD_START_POS = (20, 220)
 DEALER_CARD_START_POS = (int(GAME_BOARD_X_SIZE * 0.4), 20)
 CHIPS_START_POS = (570, 360)
 BUTTONS_START_POS = (70, 555)
-STATUS_START_POS = (540, 15)
+STATUS_START_POS = (480, 15)
 GAP_BETWEEN_CARDS = 20
 GAP_BETWEEN_CHIPS = 10
 GAP_BETWEEN_BUTTONS = 102
