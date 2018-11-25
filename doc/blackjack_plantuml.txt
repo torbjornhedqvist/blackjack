@@ -1,0 +1,21 @@
+@startuml
+
+start
+: BlackJack Init;
+
+while (done) is (False)
+  :plot base "game table board";
+  :update board status bar etc;
+  #Orange:call current_state in
+  blackjackfsm|
+  :flip (switching canvas);
+  if (timer started?) then (yes)
+    : pause;
+  else (no)
+    : do nothing;
+  endif
+  : Set window update FPS;
+endwhile (True)
+stop
+
+@enduml

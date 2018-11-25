@@ -1,0 +1,11 @@
+@startuml
+
+start
+: BettingState;
+if (Money enough to place bet) then (yes)
+    : pygame.event.get();
+else (no)
+    : FinalState;
+stop
+
+@enduml

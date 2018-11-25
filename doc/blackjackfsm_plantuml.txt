@@ -1,0 +1,27 @@
+@startuml
+
+[*] --> InitialState
+InitialState --> BettingState
+BettingState --> BettingState : Add bet
+BettingState --> BettingState : Undo bet
+BettingState --> DealingState : (Play)
+BettingState --> FinalState : Out of cash
+DealingState --> DealingState : Less than 2 cards, pull card
+DealingState --> InitialState : Tie or BlackJack
+DealingState --> PlayerHitState : (Hit), pull card
+DealingState --> SplitState : (Split)
+SplitState --> SplitState : Less than 2 cards, pull card
+SplitState --> InitialState : Two hands with 21\nTie or BlackJack
+SplitState --> PlayerHitState
+PlayerHitState --> InitialState : Player busted\n & last hand
+PlayerHitState --> DealerInitState : (Stand) or 21
+PlayerHitState --> PlayerHitState : (Hit), pull card
+DealingState --> DealerInitState : (Stand)
+DealerInitState --> InitialState : Dealer busted, win or draw
+DealerInitState --> DealerHitState : less than 21
+DealerHitState --> DealerHitState : less than 16, pull card
+DealerHitState --> DealerHitState : less than 17\nand less than player
+DealerHitState --> InitialState : dealer win or loose
+FinalState --> [*] : Print goodbye message
+
+@enduml
